@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hasil Input - Tugas Docker</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="container">
+    <div class="card success-card">
+        <div class="header">
+            <h1>✅ Data Berhasil Disimpan!</h1>
+            <p class="identity">NIM: <strong th:text="${nimKamu}"></strong></p>
+        </div>
+
+        <div class="result-box">
+            <h3>Data yang Anda input:</h3>
+            <div class="result-item">
+                <span class="label">Nama:</span>
+                <span class="value" th:text="${mahasiswa.nama}"></span>
+            </div>
+            <div class="result-item">
+                <span class="label">NIM:</span>
+                <span class="value" th:text="${mahasiswa.nim}"></span>
+            </div>
+            <div class="result-item">
+                <span class="label">Jenis Kelamin:</span>
+                <span class="value" th:text="${mahasiswa.jenisKelamin}"></span>
+            </div>
+            <div class="result-item">
+                <span class="label">Program Studi:</span>
+                <span class="value" th:text="${mahasiswa.programStudi}"></span>
+            </div>
+            <div class="result-item">
+                <span class="label">Angkatan:</span>
+                <span class="value" th:text="${mahasiswa.angkatan}"></span>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <a href="/form" class="btn-primary">➕ Input Lagi</a>
+            <a href="/home" class="btn-back">🏠 Ke Home</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
