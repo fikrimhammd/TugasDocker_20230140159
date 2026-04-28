@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Tugas Docker</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="container">
+    <div class="login-box">
+        <h2>🔐 Login</h2>
+        <p class="subtitle">Tugas Docker - 20230140159</p>
+
+        <form method="post" action="/login">
+            <div class="input-group">
+                <label>Username</label>
+                <input type="text" name="username" placeholder="admin" required>
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="NIM Kamu" required>
+            </div>
+            <button type="submit" class="btn-login">Login</button>
+            <p th:if="${error}" class="error" th:text="${error}"></p>
+        </form>
+        <div class="info">
+            <small>Username: admin | Password: NIM Kamu (20230140159)</small>
+        </div>
+    </div>
+</div>
+</body>
+</html>
